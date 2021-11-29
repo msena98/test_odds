@@ -1,0 +1,2 @@
+SELECT a.department_id, a.department_name, IF(ISNULL(b.department_id),0,Count(*)) AS employees_amount FROM departments a
+LEFT JOIN employees b ON a.department_id = b.department_id GROUP BY a.department_id
